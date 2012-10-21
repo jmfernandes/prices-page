@@ -32,7 +32,11 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/Users/josh/ruby-sample/secondapp/venv"
+=======
+set -gx VIRTUAL_ENV "/Users/josh/ruby-sample/helloflask/venv"
+>>>>>>> eaee59b5b08e881bef254e7e92a08e41bf09defa
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
