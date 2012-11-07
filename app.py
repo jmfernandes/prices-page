@@ -11,7 +11,7 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    return  render_template('ev_to_joules.html')
+    return  render_template('gasoline.html')
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
