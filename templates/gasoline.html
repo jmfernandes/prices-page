@@ -99,13 +99,13 @@
                             <div class="span8">
                                 <iframe width="400" height="150" style="background:#f5f5f5;" src="http://www.prices.datanab.net/us/gasoline_json"></iframe>
                                 <h3>How To Use</h3>
-                                Reference the url "http://www.constants.datanab.net/physics/planck_constant_json" in order to extract the JSON data. For example, if you wanted to get the variable in a Python script you would do:
+                                Reference the url "http://www.prices.datanab.net/us/gasoline_json" in order to extract the JSON data. For example, if you wanted to get the variable in a Python script you would do:
                                 <div class="well well-small">
-                                    import JSON<br>
                                     import urllib<br>
-                                    aquire = urllib.urlopen("http://www.constants.datanab.net/physics/planck_constant_json")<br>
+                                    import ast<br>
+                                    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")<br>
                                     unpacked = aquire.read()<br>
-                                    data = json.loads(unpacked)
+                                    data = ast.literal_eval(unpacked)
                                 </div>
                                 Now, you are free to reference data['value'] to use the number.
                             </div>
