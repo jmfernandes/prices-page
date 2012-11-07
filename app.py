@@ -9,11 +9,13 @@ app = Flask(__name__)
 def index():
     return  render_template('prices.html')
 
-@app.route('/US/gasoline', endpoint='gasoline')
+@app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    dict = {'value': 3.819, 'units': 'dollars/gallon', 'citation': 'http://www.eia.gov/petroleum/gasdiesel/','name': 'Average Price of Gasoline in United States'};
-    data = json.dumps(dict)
-    return data
+    return  render_template('ev_to_joules.html')
+
+@app.route('/us/gasoline_json', endpoint='gasoline_json')
+def index():
+    return  render_template('json/gasoline.json')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
