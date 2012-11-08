@@ -15,7 +15,8 @@ def hello():
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
-    return  render_template('json/gasoline.json')
+    menu = ["one","two","three"]
+    return  render_template('json/gasoline.json',menu=menu)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
