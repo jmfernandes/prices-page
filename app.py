@@ -19,8 +19,8 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    number = Number()
-    return number.data
+    user = { 'nickname': 'Miguel' }
+    return render_template('gasoline.html',user=user)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
