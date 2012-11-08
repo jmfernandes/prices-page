@@ -7,6 +7,12 @@ from flask import render_template
 
 app = Flask(__name__)
 
+def numbers():
+    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+    unpacked = aquire.read()
+    data = ast.literal_eval(unpacked)
+    return data
+
 @app.route('/')
 def index():
     return  render_template('prices.html')
@@ -14,7 +20,6 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     yo = {"hey":4}
-    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
     return  render_template('gasoline.html')
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
