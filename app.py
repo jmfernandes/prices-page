@@ -1,5 +1,7 @@
 import os
 import json
+import urllib
+import ast
 from flask import Flask
 from flask import render_template
 
@@ -16,7 +18,10 @@ def hello():
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
     menu = ["one","two","three"]
-    return  render_template('json/gasoline.json',menu=menu)
+    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+    unpacked = aquire.read()
+    data = ast.literal_eval(unpacked)
+    return  data
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
