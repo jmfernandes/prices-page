@@ -14,7 +14,10 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     menu = ["one","two","three"]
-    return  render_template('gasoline.html',menu=menu)
+    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+    unpacked = aquire.read()
+    #data = ast.literal_eval(unpacked)
+    return unpacked
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
