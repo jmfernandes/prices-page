@@ -15,9 +15,7 @@ def index():
 def hello():
     yo = {"hey":4}
     aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
-    unpacked = aquire.read()
-    data =json.dumps(yo)
-    return data
+    return  render_template('gasoline.html')
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
