@@ -21,7 +21,7 @@ def index():
     aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
     unpacked = aquire.read()
     data = ast.literal_eval(unpacked)
-    return  data
+    return menu
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
