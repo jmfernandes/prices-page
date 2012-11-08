@@ -4,6 +4,8 @@ import urllib
 import ast
 from flask import Flask
 from flask import render_template
+import jinja2
+env = jinja2.Environment(loader=jinja2.FileSystemLoader(["/home/beda/projects/python-ref/_tmp/infiles"]))
 
 app = Flask(__name__)
 
@@ -20,7 +22,8 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     user = { 'nickname': 'Miguel' }
-    return render_template('gasoline.html',user=user)
+    template = env.get_template("gasoline.html")
+    return template.render(user=user)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
