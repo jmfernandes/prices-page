@@ -14,7 +14,6 @@ class Number(object):
         self.data = ast.literal_eval(self.unpacked)
         self.data2 = json.dumps(self.data)
 
-number = Number()
 
 @app.route('/')
 def index():
