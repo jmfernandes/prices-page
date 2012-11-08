@@ -11,8 +11,7 @@ class Number(object):
     def __init__(self):
         self.aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
         self.unpacked = self.aquire.read()
-        self.data = json.dumps(self.unpacked)
-
+        self.data = json.loads(self.unpacked)
 
 @app.route('/')
 def index():
