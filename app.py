@@ -13,15 +13,15 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    return  render_template('gasoline.html')
-
-@app.route('/us/gasoline_json', endpoint='gasoline_json')
-def index():
     menu = ["one","two","three"]
     aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
     unpacked = aquire.read()
     data = ast.literal_eval(unpacked)
-    return menu
+    return  render_template('gasoline.html',menu=menu)
+
+@app.route('/us/gasoline_json', endpoint='gasoline_json')
+def index():
+    return  render_template('json/gasoline.json')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
