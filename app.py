@@ -13,7 +13,9 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    return  render_template('gasoline.html')
+    yo = {"hey":4}
+    data =json.dumps(yo)
+    return data
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
