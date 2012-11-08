@@ -21,7 +21,7 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     data3 = numbers()
-    return data3
+    return "hello"
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
