@@ -14,6 +14,8 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     yo = {"hey":4}
+    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+    unpacked = aquire.read()
     data =json.dumps(yo)
     return data
 
