@@ -13,8 +13,7 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    menu = ["one","two","three"]
-    return menu
+    return  render_template('gasoline.html')
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
