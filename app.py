@@ -20,7 +20,8 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    return numbers()
+    data3 = numbers()
+    return data3
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
