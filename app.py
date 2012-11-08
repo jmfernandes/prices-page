@@ -6,6 +6,7 @@ from flask import Flask
 from flask import render_template
 
 aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+unpacked = aquire.read()
 
 app = Flask(__name__)
 
@@ -16,7 +17,6 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
     menu = ["one","two","three"]
-    unpacked = aquire.read()
     data = json.dumps(unpacked)
     return data
 
