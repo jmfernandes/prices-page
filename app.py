@@ -11,7 +11,8 @@ def numbers():
     aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
     unpacked = aquire.read()
     data = ast.literal_eval(unpacked)
-    return data
+    data2 = json.dumps(data)
+    return data2
 
 @app.route('/')
 def index():
