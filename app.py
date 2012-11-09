@@ -4,8 +4,11 @@ import urllib
 import ast
 from flask import Flask
 from flask import render_template
+import webapp2
+
 import jinja2
-env = jinja2.Environment(loader=jinja2.FileSystemLoader(["/home/beda/projects/python-ref/_tmp/infiles"]))
+
+jinja_environment = jinja2.Environment(autoescape=True,loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
 app = Flask(__name__)
 
@@ -21,9 +24,16 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello():
-    user = { 'nickname': 'Miguel' }
-    template = env.get_template("gasoline.html")
-    return template.render(user=user)
+    template_values = {
+        'name': 'SomeGuy',
+        'verb': 'extremely enjoy'
+            }
+            
+    template = jinja_environment.get_template('gasoline.html')
+    return template.render(template_values)
+#   user = { 'nickname': 'Miguel' }
+#   template = env.get_template("gasoline.html")
+#return template.render(user=user)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
