@@ -21,7 +21,7 @@ def index():
 def hello(name=5):
     verb="like"
     aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    return render_template('gasoline.html',name=name, verb=verb)
+    return render_template('gasoline.html',name=name, verb=aquire)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
