@@ -4,11 +4,6 @@ import urllib
 import ast
 from flask import Flask
 from flask import render_template
-import webapp2
-
-import jinja2
-
-jinja_environment = jinja2.Environment(autoescape=True,loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
 app = Flask(__name__)
 
@@ -23,21 +18,14 @@ def index():
     return  render_template('prices.html')
 
 @app.route('/us/gasoline', endpoint='gasoline')
-def hello(name=steve):
-    template_values = {
-        'name': 'SomeGuy',
-        'verb': 'extremely enjoy'
-            }
-    return render_template('gasoline.html',name=name)
-    #template = jinja_environment.get_template('gasoline.html')
-    #return template.render(template_values)
-    #   user = { 'nickname': 'Miguel' }
-    #   template = env.get_template("gasoline.html")
-    #return template.render(user=user)
+def hello():
+    user = { 'nickname': 'Miguel' }
+    template = env.get_template("gasoline.html")
+    return template.render(user=user)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
-    return  render_template('json/gasoline.json')
+    return render_template('json/gasoline.json')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
