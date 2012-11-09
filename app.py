@@ -27,14 +27,13 @@ def hello(name=5):
     "name": "Average Price of Gasoline in United States",
     "citation": "http://www.eia.gov/petroleum/gasdiesel/"
     }
-    data =json.dumps(dict)
     #unpacked = aquire.read()
     #data = ast.literal_eval(unpacked)
     #opener = urllib2.build_opener()
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',name=name, verb=dict)
+    return render_template('gasoline.html',name=name, data=dict)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
