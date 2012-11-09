@@ -23,17 +23,17 @@ def index():
     return  render_template('prices.html')
 
 @app.route('/us/gasoline', endpoint='gasoline')
-def hello():
+def hello(name=steve):
     template_values = {
         'name': 'SomeGuy',
         'verb': 'extremely enjoy'
             }
-            
-    template = jinja_environment.get_template('gasoline.html')
-    return template.render(template_values)
-#   user = { 'nickname': 'Miguel' }
-#   template = env.get_template("gasoline.html")
-#return template.render(user=user)
+    return render_template('gasoline.html',name=name)
+    #template = jinja_environment.get_template('gasoline.html')
+    #return template.render(template_values)
+    #   user = { 'nickname': 'Miguel' }
+    #   template = env.get_template("gasoline.html")
+    #return template.render(user=user)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
