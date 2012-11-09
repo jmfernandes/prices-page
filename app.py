@@ -20,6 +20,7 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello(name=5):
     verb="like"
+    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
     return render_template('gasoline.html',name=name, verb=verb)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
