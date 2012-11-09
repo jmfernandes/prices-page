@@ -20,14 +20,14 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello(name=5):
     verb="like"
-    aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    unpacked = aquire.read()
-    data = ast.literal_eval(unpacked)
+    self.aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
+    self.unpacked = self.aquire.read()
+    self.data = ast.literal_eval(self.unpacked)
     #opener = urllib2.build_opener()
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',name=name, verb=aquire)
+    return render_template('gasoline.html',name=name, verb=verb)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
