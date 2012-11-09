@@ -7,11 +7,11 @@ from flask import render_template
 
 app = Flask(__name__)
 
-class Number(object):
-    def __init__(self):
-        self.aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
-        self.unpacked = self.aquire.read()
-        self.data = json.loads(self.unpacked)
+#class Number(object):
+#    def __init__(self):
+#        self.aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+#        self.unpacked = self.aquire.read()
+#        self.data = json.loads(self.unpacked)
 
 @app.route('/')
 def index():
@@ -21,7 +21,8 @@ def index():
 def hello(name=5):
     verb="like"
     aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    hey = urllib2.urlopen(aquire)
+    opener = urllib2.build_opener()
+    #hey = urllib2.urlopen(aquire)
     return render_template('gasoline.html',name=name, verb=aquire)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
