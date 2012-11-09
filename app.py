@@ -34,7 +34,7 @@ def hello(name=5):
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',name=name, verb=data)
+    return render_template('gasoline.html',name=name, verb=data["units"])
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
