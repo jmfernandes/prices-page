@@ -18,8 +18,8 @@ def index():
     return  render_template('prices.html')
 
 @app.route('/us/gasoline', endpoint='gasoline')
-def hello(name="steve"):
-    return render_template('gasoline.html',name="steve")
+def hello(name=5):
+    return render_template('gasoline.html',name=name)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
