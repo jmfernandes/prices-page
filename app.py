@@ -22,7 +22,7 @@ def hello():
     return render_template('gasoline.html')
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
-def index(name=steve):
+def index(name="steve"):
     return render_template('json/gasoline.json',name=name)
 
 if __name__ == '__main__':
