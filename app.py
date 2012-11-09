@@ -21,7 +21,8 @@ def index():
 def hello(name=5):
     verb="like"
     aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    data = ast.literal_eval(aquire)
+    unpacked = aquire.read()
+    data = ast.literal_eval(unpacked)
     #opener = urllib2.build_opener()
     #results = opener.open(aquire)
     #final = results.read()
