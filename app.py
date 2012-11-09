@@ -1,6 +1,6 @@
 import os
 import json
-import urllib
+import urllib2
 import ast
 from flask import Flask
 from flask import render_template
@@ -20,7 +20,7 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def hello(name=5):
     verb="like"
-    aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
+    aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
     return render_template('gasoline.html',name=name, verb=verb)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
