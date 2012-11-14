@@ -18,12 +18,11 @@ def index():
     return  render_template('prices.html')
 
 @app.route('/us/gasoline', endpoint='gasoline')
-def hello(name=5):
-    verb="like"
+def hello():
     aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    #response = urllib2.urlopen(aquire)
-    #the_page = response.read()
-    #data = json.loads(the_page)
+    response = urllib2.urlopen(aquire)
+    the_page = response.read()
+    data = json.loads(the_page)
     #aquire2 = str(aquire)
     #unpacked = json.loads(aquire2)
     dict = {
@@ -38,15 +37,15 @@ def hello(name=5):
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',name=name, data=dict)
+    return render_template('gasoline.html',data=data)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/gasoline.json')
 
-#app.debug = True
-#app.run()
-#exit()
+app.debug = True
+app.run()
+exit()
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
