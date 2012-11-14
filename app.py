@@ -4,6 +4,7 @@ import urllib2
 import ast
 from flask import Flask
 from flask import render_template
+#from google.appengine.api import urlfetch
 
 app = Flask(__name__)
 
@@ -18,8 +19,16 @@ def index():
     return  render_template('prices.html')
 
 @app.route('/us/gasoline', endpoint='gasoline')
-def hello():
-    aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
+def index():
+    req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
+    response = urllib2.urlopen(req)
+    data2 = response.read()
+    data = json.loads(data2)
+    #logging.info('url%s' % url)
+    #result = urlfetch.fetch(url)
+    #jsondata = json.loads(result.content)
+    #jsondata = json.load(urllib.urlopen(url))
+    #aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
     #response = urllib2.urlopen(aquire)
     #the_page = aquire.read()
     #data = json.loads(the_page)
@@ -37,15 +46,15 @@ def hello():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',data=dict)
+    return render_template('gasoline.html',data=data)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/gasoline.json')
 
-#app.debug = True
-#app.run()
-#exit()
+app.debug = True
+app.run()
+exit()
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
