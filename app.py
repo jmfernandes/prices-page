@@ -21,7 +21,7 @@ def index():
 
 @app.route('/us/gasoline', endpoint='gasoline')
 def index():
-    req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
+    #req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
     json_file = open('templates/json/gasoline.json')
     data = json.load(json_file)
     json_file.close()
@@ -51,7 +51,7 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',data=dict)
+    return render_template('gasoline.html',data=data)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
