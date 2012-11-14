@@ -1,9 +1,10 @@
 import os
-import json
+#import json
 import urllib2
 import ast
 from flask import Flask
 from flask import render_template
+from flask import json
 #from google.appengine.api import urlfetch
 
 app = Flask(__name__)
@@ -21,9 +22,9 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def index():
     req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    response = urllib2.urlopen(req)
-    data2 = response.read()
-    data = json.loads(data2)
+    #response = urllib2.urlopen(req)
+    #data2 = response.read()
+    #data = json.loads(data2)
     #logging.info('url%s' % url)
     #result = urlfetch.fetch(url)
     #jsondata = json.loads(result.content)
@@ -34,6 +35,7 @@ def index():
     #data = json.loads(the_page)
     #aquire2 = str(aquire)
     #unpacked = json.loads(aquire2)
+    data = jsonify(value=3.492,units="dollars/gallon",name="Average Price of Gasoline in United States",citation="http://www.eia.gov/petroleum/gasdiesel/")
     dict = {
     "value": 3.492,
     "units": "dollars/gallon",
