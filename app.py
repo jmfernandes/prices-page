@@ -22,7 +22,9 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def index():
     req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    #yo = ast.literal_eval(req)
+    json_file = open('templates/json/gasoline.json')
+    data = json.load(json_file)
+    json_file.close()
     #response = urllib2.urlopen(req)
     #data2 = response.read()
     #data = json.loads(data2)
