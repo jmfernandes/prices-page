@@ -21,7 +21,7 @@ def index():
 def hello():
     aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
     response = urllib2.urlopen(aquire)
-    the_page = response.read()
+    the_page = aquire.read()
     data = json.loads(the_page)
     #aquire2 = str(aquire)
     #unpacked = json.loads(aquire2)
@@ -43,9 +43,10 @@ def hello():
 def index():
     return render_template('json/gasoline.json')
 
-app.debug = True
-app.run()
-exit()
+#app.debug = True
+#app.run()
+#exit()
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
