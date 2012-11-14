@@ -22,9 +22,9 @@ def index():
 @app.route('/us/gasoline', endpoint='gasoline')
 def index():
     req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    #response = urllib2.urlopen(req)
-    #data2 = response.read()
-    #data = json.loads(data2)
+    response = urllib2.urlopen(req)
+    data2 = response.read()
+    data = json.loads(data2)
     #logging.info('url%s' % url)
     #result = urlfetch.fetch(url)
     #jsondata = json.loads(result.content)
@@ -48,15 +48,15 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',data=dict)
+    return render_template('gasoline.html',data=data)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/gasoline.json')
 
-#app.debug = True
-#app.run()
-#exit()
+app.debug = True
+app.run()
+exit()
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
