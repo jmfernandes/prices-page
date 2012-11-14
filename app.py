@@ -39,12 +39,6 @@ def index():
     #aquire2 = str(aquire)
     #unpacked = json.loads(aquire2)
     #data = jsonify(value=3.492,units="dollars/gallon",name="Average Price of Gasoline in United States",citation="http://www.eia.gov/petroleum/gasdiesel/")
-    dict = {
-    "value": 3.492,
-    "units": "dollars/gallon",
-    "name": "Average Price of Gasoline in United States",
-    "citation": "http://www.eia.gov/petroleum/gasdiesel/"
-    }
     #unpacked = aquire.read()
     #data = ast.literal_eval(unpacked)
     #opener = urllib2.build_opener()
