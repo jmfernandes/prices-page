@@ -48,7 +48,7 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',data=data)
+    return render_template('gasoline.html',data=dict)
 
 @app.route('/us/gasoline_json', endpoint='gasoline_json')
 def index():
