@@ -9,6 +9,10 @@ from flask import json
 
 app = Flask(__name__)
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+
 #class Number(object):
 #    def __init__(self):
 #        self.aquire = urllib.urlopen("http://www.prices.datanab.net/us/gasoline_json")
