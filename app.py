@@ -1,11 +1,5 @@
 import os
-#import json
-import urllib2
-import ast
-from flask import Flask
-from flask import render_template
-from flask import json
-#from google.appengine.api import urlfetch
+from flask import Flask, render_template, json
 
 app = Flask(__name__)
 
