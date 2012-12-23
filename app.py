@@ -23,10 +23,10 @@ def page_not_found(error):
 def index():
     return  render_template('prices.html')
 
-@app.route('/us/gasoline', endpoint='gasoline')
+@app.route('/us/fuel/gasoline', endpoint='gasoline')
 def index():
     #req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    json_file = open('templates/json/gasoline.json')
+    json_file = open('templates/json/fuel/gasoline.json')
     data = json.load(json_file)
     json_file.close()
     #response = urllib2.urlopen(req)
@@ -49,11 +49,11 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('gasoline.html',data=data)
+    return render_template('fuel/gasoline.html',data=data)
 
-@app.route('/us/gasoline_json', endpoint='gasoline_json')
+@app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
-    return render_template('json/gasoline.json')
+    return render_template('json/fuel/gasoline.json')
 
 #app.debug = True
 #app.run()
