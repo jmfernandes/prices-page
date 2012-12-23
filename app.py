@@ -51,7 +51,7 @@ def index():
     #hey = urllib2.urlopen(aquire)
     return render_template('fuel/gasoline.html',data=data)
 
-@app.route('/us/grocery/flour', endpoint='flour)
+@app.route('/us/grocery/flour', endpoint='flour')
 def index():
     json_file = open('templates/json/grocery/flour.json')
     data = json.load(json_file)
@@ -65,6 +65,10 @@ def index():
 @app.route('/us/grocery/flour_json', endpoint='flour_json')
 def index():
     return render_template('json/grocery/flour.json')
+
+#app.debug = True
+#app.run()
+#exit()
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
