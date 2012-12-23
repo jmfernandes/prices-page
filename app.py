@@ -66,10 +66,6 @@ def index():
 def index():
     return render_template('json/grocery/flour.json')
 
-#app.debug = True
-#app.run()
-#exit()
-
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
