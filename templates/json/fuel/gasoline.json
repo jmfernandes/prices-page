@@ -1,6 +1,9 @@
 {
 "value": 3.449,
+"symbol": "P",
+"subscript": "",
 "units": "dollars/gallon",
-"name": "Average Price of Gasoline in United States",
-"citation": "http://www.eia.gov/petroleum/gasdiesel/"
+"name": "Average Price of Gasoline in United States", 
+"citation": "http://www.eia.gov/petroleum/gasdiesel/",
+"url":"http://www.prices.datanab.net/us/fuel/gasoline_json"
 }

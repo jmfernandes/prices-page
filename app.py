@@ -51,9 +51,20 @@ def index():
     #hey = urllib2.urlopen(aquire)
     return render_template('fuel/gasoline.html',data=data)
 
+@app.route('/us/grocery/flour', endpoint='flour)
+def index():
+    json_file = open('templates/json/grocery/flour.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('grocery/flour.html',data=data)
+
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/fuel/gasoline.json')
+           
+@app.route('/us/grocery/flour_json', endpoint='flour_json')
+def index():
+    return render_template('json/grocery/flour.json')
 
 #app.debug = True
 #app.run()
