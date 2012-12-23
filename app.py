@@ -50,7 +50,7 @@ def index():
     json_file = open('templates/json/grocery/flour.json')
     data = json.load(json_file)
     json_file.close()
-    return render_template('grocery/flour.html',data=data)
+    return render_template('fuel/gasoline.html',data=data)
 
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
