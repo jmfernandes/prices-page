@@ -43,7 +43,7 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('../Constants/templates/webpage.html',data=data)
+    return render_template('../../Constants/templates/webpage.html',data=data)
 
 @app.route('/us/grocery/flour', endpoint='flour')
 def index():
