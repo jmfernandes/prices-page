@@ -1,6 +1,9 @@
 {
 "value": .497,
+"symbol": "P",
+"subscript": "",
 "units": "dollars/pound",
-"name": "Average Price of Flour in United States",
-"citation": "http://www.bls.gov/ro3/apmw.htm"
+"name": "Average Price of Flour in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/flour_json"
 }
