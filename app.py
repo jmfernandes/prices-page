@@ -43,11 +43,11 @@ def index():
     #results = opener.open(aquire)
     #final = results.read()
     #hey = urllib2.urlopen(aquire)
-    return render_template('../../../Constants/templates/webpage.html',data=data)
+    return render_template('../../Constants/templates/webpage.html',data=data)
 
 @app.route('/us/grocery/flour', endpoint='flour')
 def index():
-    json_file = open('templates/json/grocery/flour.json')
+    json_file = open('templates/json/fuel/gasoline.json')
     data = json.load(json_file)
     json_file.close()
     return render_template('grocery/flour.html',data=data)
