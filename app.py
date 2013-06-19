@@ -52,6 +52,13 @@ def index():
     json_file.close()
     return render_template('webpage.html',data=data)
 
+@app.route('/us/goods/white_sugar', endpoint='white_sugar')
+def index():
+    json_file = open('templates/json/goods/white_sugar.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/fuel/gasoline.json')
@@ -60,9 +67,10 @@ def index():
 def index():
     return render_template('json/grocery/flour.json')
 
-#app.debug = True
-#app.run()
-#exit()
+@app.route('/us/goods/white_sugar_json', endpoint='white_sugar_json')
+def index():
+    return render_template('json/goods/white_sugar.json')
+
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
