@@ -59,6 +59,15 @@ def index():
     json_file.close()
     return render_template('webpage.html',data=data)
 
+@app.route('/us/housing/housing', endpoint='housing')
+def index():
+    json_file = open('templates/json/housing/housing.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+"""JSON Data"""
+
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/fuel/gasoline.json')
@@ -70,6 +79,10 @@ def index():
 @app.route('/us/goods/white_sugar_json', endpoint='white_sugar_json')
 def index():
     return render_template('json/goods/white_sugar.json')
+
+@app.route('/us/housing/housing_json', endpoint='housing_json')
+def index():
+    return render_template('json/housing/housing.json')
 
 
 if __name__ == '__main__':

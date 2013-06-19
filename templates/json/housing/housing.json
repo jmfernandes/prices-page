@@ -1,0 +1,9 @@
+{
+"value": 272900,
+"symbol": "P",
+"subscript": "",
+"units": "dollars",
+"name": "Average Selling Price of a House in United States", 
+"citation": "http://www.census.gov/const/uspriceann.pdf",
+"url":"http://www.prices.datanab.net/us/housing/housing_json"
+}
