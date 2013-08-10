@@ -5,5 +5,5 @@
 "units": "dollars/pound",
 "name": "Average Price of White Sugar in United States", 
 "citation": "http://www.bls.gov/ro3/apmw.htm",
-"url":"http://www.prices.datanab.net/us/fuel/white_sugar_json"
+"url":"http://www.prices.datanab.net/us/goods/white_sugar_json"
 }
