@@ -26,6 +26,36 @@
                                 {
                                     padding:15px; text-align: left
                                 }
+                                .open {
+                display: block;
+            }
+            .closed {
+                display: none;
+            }
+                                .item1 {
+                font-size: 15px;
+                text-decoration:none;
+                cursor: pointer;
+                color:black;
+                position:relative; right:18%;
+
+            }
+            .item2 {
+                list-style-type: none;
+                font-size:14px;
+            }
+            .item3 {
+                list-style-type: none;
+                display:inline;
+            }
+            .item4 {
+                font-size: 15px;
+                text-decoration:none;
+                cursor: pointer;
+                color:black;
+                position:relative; right:12%;
+
+            }
                                 footer {
                                     width:100%;
                                     position:fixed;
@@ -104,15 +134,26 @@
                                     </tr>
                                     <tr>
                                         <td><a href="http://www.prices.datanab.net/us/fuel/gasoline">Gasoline (US avg.)</a><br></td>
-                                        <td><a href="http://www.prices.datanab.net/us/grocery/flour">Flour (US avg.)</a><br></td>
+                                        <td>
+                                        <a href="http://www.prices.datanab.net/us/grocery/flour">Flour (US avg.)</a><br>
+                                        <ul class="open">
+                                        <ol class="item3" id="item13"><a class="item4" onclick="toggle('item13');">Cereals (click to expand)</a></ol>
+                                        <ul id="ul_item13" class="closed">
+                                            <li class="item2" id="item13_1"><a href="http://www.constants.datanab.net/chemistry/density/aluminum">Aluminum</a></li>
+                                        </ul><br>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th>Housing Prices</th>
                                         <th>Goods Prices</th>
                                     </tr>
                                     <tr>
-                                        <td><a href="http://www.prices.datanab.net/us/housing/housing">Housing (US 2011 avg.)</a><br></td>
-                                        <td><a href="http://www.prices.datanab.net/us/goods/white_sugar">White Sugar (US avg.)</a><br></td>
+                                        <td>
+                                        <a href="http://www.prices.datanab.net/us/housing/housing">Housing (US 2011 avg.)</a><br>
+                                        </td>
+                                        <td>
+                                        <a href="http://www.prices.datanab.net/us/goods/white_sugar">White Sugar (US avg.)</a><br>
+                                        </td>
                                     </tr>
                                 </table>
                             </div><!--/span-->
