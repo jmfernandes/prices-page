@@ -1,0 +1,9 @@
+{
+"value": 1.267,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Spaghetti and macaroni in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/goods/spaghetti_json"
+}

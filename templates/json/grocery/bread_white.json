@@ -1,0 +1,9 @@
+{
+"value": 1.400,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of White Bread in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/goods/bread_white_json"
+}

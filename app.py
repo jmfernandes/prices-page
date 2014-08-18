@@ -19,35 +19,7 @@ def index():
 
 @app.route('/us/fuel/gasoline', endpoint='gasoline')
 def index():
-    #req = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
     json_file = open('templates/json/fuel/gasoline.json')
-    data = json.load(json_file)
-    json_file.close()
-    #response = urllib2.urlopen(req)
-    #data2 = response.read()
-    #data = json.loads(data2)
-    #logging.info('url%s' % url)
-    #result = urlfetch.fetch(url)
-    #jsondata = json.loads(result.content)
-    #jsondata = json.load(urllib.urlopen(url))
-    #aquire = urllib2.Request("http://www.prices.datanab.net/us/gasoline_json")
-    #response = urllib2.urlopen(aquire)
-    #the_page = aquire.read()
-    #data = json.loads(the_page)
-    #aquire2 = str(aquire)
-    #unpacked = json.loads(aquire2)
-    #data = jsonify(value=3.492,units="dollars/gallon",name="Average Price of Gasoline in United States",citation="http://www.eia.gov/petroleum/gasdiesel/")
-    #unpacked = aquire.read()
-    #data = ast.literal_eval(unpacked)
-    #opener = urllib2.build_opener()
-    #results = opener.open(aquire)
-    #final = results.read()
-    #hey = urllib2.urlopen(aquire)
-    return render_template('webpage.html',data=data)
-
-@app.route('/us/grocery/flour', endpoint='flour')
-def index():
-    json_file = open('templates/json/grocery/flour.json')
     data = json.load(json_file)
     json_file.close()
     return render_template('webpage.html',data=data)
@@ -66,15 +38,55 @@ def index():
     json_file.close()
     return render_template('webpage.html',data=data)
 
+#Cereal
+
+@app.route('/us/grocery/flour', endpoint='flour')
+def index():
+    json_file = open('templates/json/grocery/flour.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/bread_white', endpoint='bread_white')
+def index():
+    json_file = open('templates/json/grocery/bread_white.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/bread_whole_wheat', endpoint='bread_whole_wheat')
+def index():
+    json_file = open('templates/json/grocery/bread_whole_wheat.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/cookies_chocolate_chip', endpoint='cookies_chocolate_chip')
+def index():
+    json_file = open('templates/json/grocery/cookies_chocolate_chip.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/rice_white_long', endpoint='rice_white_long')
+def index():
+    json_file = open('templates/json/grocery/rice_white_long.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/spaghetti', endpoint='spaghetti')
+def index():
+    json_file = open('templates/json/grocery/spaghetti.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
 """JSON Data"""
 
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
 def index():
     return render_template('json/fuel/gasoline.json')
-           
-@app.route('/us/grocery/flour_json', endpoint='flour_json')
-def index():
-    return render_template('json/grocery/flour.json')
 
 @app.route('/us/goods/white_sugar_json', endpoint='white_sugar_json')
 def index():
@@ -83,6 +95,32 @@ def index():
 @app.route('/us/housing/housing_json', endpoint='housing_json')
 def index():
     return render_template('json/housing/housing.json')
+
+#CEREAL
+
+@app.route('/us/grocery/flour_json', endpoint='flour_json')
+def index():
+    return render_template('json/grocery/flour.json')
+
+@app.route('/us/grocery/bread_white_json', endpoint='bread_white_json')
+def index():
+    return render_template('json/grocery/bread_white.json')
+
+@app.route('/us/grocery/bread_whole_wheat_json', endpoint='bread_whole_wheat_json')
+def index():
+    return render_template('json/grocery/bread_whole_wheat.json')
+
+@app.route('/us/grocery/cookies_chocolate_chip_json', endpoint='cookies_chocolate_chip_json')
+def index():
+    return render_template('json/grocery/cookies_chocolate_chip.json')
+
+@app.route('/us/grocery/rice_white_long_json', endpoint='rice_white_long_json')
+def index():
+    return render_template('json/grocery/rice_white_long.json')
+
+@app.route('/us/grocery/spaghetti_json', endpoint='spaghetti_json')
+def index():
+    return render_template('json/grocery/spaghetti.json')
 
 
 if __name__ == '__main__':

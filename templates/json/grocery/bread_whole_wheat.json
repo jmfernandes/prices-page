@@ -1,9 +1,9 @@
 {
-"value": 0.656,
+"value": 2.027,
 "symbol": "P",
 "subscript": "",
 "units": "dollars/pound",
-"name": "Average Price of White Sugar in United States", 
+"name": "Average Price of Whole Wheat Bread in United States", 
 "citation": "http://www.bls.gov/ro3/apmw.htm",
 "url":"http://www.prices.datanab.net/us/goods/white_sugar_json"
 }

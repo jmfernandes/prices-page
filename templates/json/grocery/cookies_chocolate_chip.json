@@ -1,0 +1,9 @@
+{
+"value": 3.324,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Chocolate Chip Cookies in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/goods/cookies_chocolate_chip_json"
+}
