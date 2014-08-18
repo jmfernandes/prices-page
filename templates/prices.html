@@ -24,11 +24,11 @@
                 }
                 td
                 {
-                    padding:15px; text-align: left
+                    padding:15px; text-align: left; vertical-align:text-top; 
                 }
                 tr
                 {
-                    padding:15px; text-align: left
+                    padding:15px; text-align: left; vertical-align:text-top; 
                 }
                 .open {
                 display: block;
@@ -144,9 +144,10 @@
                                         <td>
                                         <a href="http://www.prices.datanab.net/us/grocery/flour">Flour (US avg.)</a><br>
                                         <ul class="open">
-                                            <ol class="item3" id="item13"><a class="item4" onclick="toggle('item13');">Cereals (click to expand)</a></ol>
-                                            <ul id="ul_item13" class="closed">
-                                                <li class="item2" id="item13_1"><a href="http://www.constants.datanab.net/chemistry/density/aluminum">Aluminum</a></li>
+                                            <ol class="item3" id="item11"><a class="item4" onclick="toggle('item11');">Cereals (click to expand)</a></ol>
+                                            <ul id="ul_item11" class="closed">
+                                                <li class="item2" id="item11_1">
+                                                <a href="http://www.prices.datanab.net/us/grocery/flour">Flour (US avg.)</a></li>
                                             </ul>
                                         </ul>
                                         <br>
@@ -185,10 +186,13 @@
             <script src="http://conversions.herokuapp.com/static/js/bootstrap.min.js"></script>
             <script src="http://conversions.herokuapp.com/static/js/timestamp.js"></script>
             <script src="http://conversions.herokuapp.com/static/js/bootstrap-dropdown.js"></script>
+            <script src="http://conversions.herokuapp.com/static/js/toggle.js"></script>
             <script type="text/javascript">
                 $(document).ready(function () {
                                   $('.dropdown-toggle').dropdown();
                                   });
+
+                $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
                 </script>
 
             <script src="//static.getclicky.com/js" type="text/javascript"></script>
