@@ -5,71 +5,75 @@
             <meta charset="utf-8">
                 <title>Prices Page</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <meta name="description" content="">
-                        <meta name="author" content="">
-                            <link rel="stylesheet" type="text/css" href="http://conversions.herokuapp.com/static/bootstrap.css" />
-                            <link rel="SHORTCUT ICON" href="http://conversions.herokuapp.com/static/img/Dglove.ico">
-                            <style type="text/css">
-                                body {
-                                    padding-top: 60px;
-                                    padding-bottom: 40px;
-                                    background-image:url('http://www.conversions.datanab.net/static/img/striped_lens.png'); 
-                                }
-                                .sidebar-nav {
-                                    padding: 9px 0;
-                                }
-                                th
-                                {
-                                    text-align: center
-                                }
-                                td
-                                {
-                                    padding:15px; text-align: left
-                                }
-                                .open {
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <link rel="stylesheet" type="text/css" href="http://conversions.herokuapp.com/static/bootstrap.css" />
+                <link rel="SHORTCUT ICON" href="http://conversions.herokuapp.com/static/img/Dglove.ico">
+                <style type="text/css">
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                    background-image:url('http://www.conversions.datanab.net/static/img/striped_lens.png'); 
+                }
+                .sidebar-nav {
+                    padding: 9px 0;
+                }
+                th
+                {
+                    text-align: left
+                }
+                td
+                {
+                    padding:15px; text-align: left
+                }
+                tr
+                {
+                    padding:15px; text-align: left
+                }
+                .open {
                 display: block;
-            }
-            .closed {
-                display: none;
-            }
-                                .item1 {
-                font-size: 15px;
-                text-decoration:none;
-                cursor: pointer;
-                color:black;
-                position:relative; right:18%;
+                }
+                .closed {
+                    display: none;
+                }
+                .item1 {
+                    font-size: 15px;
+                    text-decoration:none;
+                    cursor: pointer;
+                    color:black;
+                    position:relative; right:18%;
 
-            }
-            .item2 {
-                list-style-type: none;
-                font-size:14px;
-            }
-            .item3 {
-                list-style-type: none;
-                display:inline;
-            }
-            .item4 {
+                }
+                .item2 {
+                    list-style-type: none;
+                    font-size:14px;
+                }
+                .item3 {
+                    list-style-type: none;
+                    display:inline;
+                }
+                .item4 {
                 font-size: 15px;
                 text-decoration:none;
                 cursor: pointer;
                 color:black;
                 position:relative; right:12%;
 
-            }
-                                footer {
-                                    width:100%;
-                                    position:fixed;
-                                    top: auto;
-                                    bottom: 0;
-                                    background:#6cf;
-                                }
-                                </style>
-                            <link rel="shortcut icon" href="ico/favicon.ico">
-                                <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-                                    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-                                        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-                                            <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-                                                </head>
+                }
+                footer {
+                    width:100%;
+                    position:fixed;
+                    top: auto;
+                    bottom: 0;
+                    background:#6cf;
+                }
+                </style>
+                <link rel="shortcut icon" href="ico/favicon.ico">
+                <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                </head>
         <body>
             <div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-inner">
@@ -133,14 +137,19 @@
                                         <th>Grocery Prices</th>
                                     </tr>
                                     <tr>
-                                        <td><a href="http://www.prices.datanab.net/us/fuel/gasoline">Gasoline (US avg.)</a><br></td>
+                                        <td>
+                                        <a href="http://www.prices.datanab.net/us/fuel/gasoline">Gasoline (US avg.)</a>
+                                        <br>
+                                        </td>
                                         <td>
                                         <a href="http://www.prices.datanab.net/us/grocery/flour">Flour (US avg.)</a><br>
                                         <ul class="open">
-                                        <ol class="item3" id="item13"><a class="item4" onclick="toggle('item13');">Cereals (click to expand)</a></ol>
-                                        <ul id="ul_item13" class="closed">
-                                            <li class="item2" id="item13_1"><a href="http://www.constants.datanab.net/chemistry/density/aluminum">Aluminum</a></li>
-                                        </ul><br>
+                                            <ol class="item3" id="item13"><a class="item4" onclick="toggle('item13');">Cereals (click to expand)</a></ol>
+                                            <ul id="ul_item13" class="closed">
+                                                <li class="item2" id="item13_1"><a href="http://www.constants.datanab.net/chemistry/density/aluminum">Aluminum</a></li>
+                                            </ul>
+                                        </ul>
+                                        <br>
                                         </td>
                                     </tr>
                                     <tr>
