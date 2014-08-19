@@ -1,0 +1,9 @@
+{
+"value": 5.484,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Ground Beef (Lean) in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/beef_ground_lean_json"
+}

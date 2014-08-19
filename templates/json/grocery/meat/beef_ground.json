@@ -1,0 +1,9 @@
+{
+"value": 3.880,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Ground Beef in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/beef_ground_json"
+}

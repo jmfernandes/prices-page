@@ -1,0 +1,9 @@
+{
+"value": 5.100,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Chuck Roast in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/chuck_roast_json"
+}

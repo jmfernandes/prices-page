@@ -82,6 +82,118 @@ def index():
     json_file.close()
     return render_template('webpage.html',data=data)
 
+
+
+
+
+@app.route('/us/grocery/bacon', endpoint='bacon')
+def index():
+    json_file = open('templates/json/grocery/meat/bacon.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/beef_ground_chuck', endpoint='beef_ground_chuck')
+def index():
+    json_file = open('templates/json/grocery/meat/beef_ground_chuck.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/beef_ground_lean', endpoint='beef_ground_lean')
+def index():
+    json_file = open('templates/json/grocery/meat/beef_ground_lean.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/beef_ground', endpoint='beef_ground')
+def index():
+    json_file = open('templates/json/grocery/meat/beef_ground.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/bologna', endpoint='bologna')
+def index():
+    json_file = open('templates/json/grocery/meat/bologna.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/chicken_boneless', endpoint='chicken_boneless')
+def index():
+    json_file = open('templates/json/grocery/meat/chicken_boneless.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/chicken_breast', endpoint='chicken_breast')
+def index():
+    json_file = open('templates/json/grocery/meat/chicken_breast.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/chicken_legs', endpoint='chicken_legs')
+def index():
+    json_file = open('templates/json/grocery/meat/chicken_legs.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/chicken_whole', endpoint='chicken_whole')
+def index():
+    json_file = open('templates/json/grocery/meat/chicken_whole.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/chuck_roast', endpoint='chuck_roast')
+def index():
+    json_file = open('templates/json/grocery/meat/chuck_roast.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/ham', endpoint='ham')
+def index():
+    json_file = open('templates/json/grocery/meat/ham.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/pork_chop_boneless', endpoint='pork_chop_boneless')
+def index():
+    json_file = open('templates/json/grocery/meat/pork_chop_boneless.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/pork_chop_center_cut', endpoint='pork_chop_center_cut')
+def index():
+    json_file = open('templates/json/grocery/meat/pork_chop_center_cut.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/round_roast', endpoint='round_roast')
+def index():
+    json_file = open('templates/json/grocery/meat/round_roast.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/us/grocery/steak_sirloin', endpoint='steak_sirloin')
+def index():
+    json_file = open('templates/json/grocery/meat/steak_sirloin.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+    
+
+
 """JSON Data"""
 
 @app.route('/us/fuel/gasoline_json', endpoint='gasoline_json')
@@ -121,6 +233,69 @@ def index():
 @app.route('/us/grocery/spaghetti_json', endpoint='spaghetti_json')
 def index():
     return render_template('json/grocery/spaghetti.json')
+
+#meat
+
+@app.route('/us/grocery/bacon_json', endpoint='bacon_json')
+def index():
+    return render_template('json/grocery/meat/bacon.json')
+
+@app.route('/us/grocery/beef_ground_chuck_json', endpoint='beef_ground_chuck_json')
+def index():
+    return render_template('json/grocery/meat/beef_ground_chuck.json')
+
+@app.route('/us/grocery/beef_ground_lean_json', endpoint='beef_ground_lean_json')
+def index():
+    return render_template('json/grocery/meat/beef_ground_lean.json')
+
+@app.route('/us/grocery/beef_ground_json', endpoint='beef_ground_json')
+def index():
+    return render_template('json/grocery/meat/beef_ground.json')
+
+@app.route('/us/grocery/bologna_json', endpoint='bologna_json')
+def index():
+    return render_template('json/grocery/meat/bologna.json')
+
+@app.route('/us/grocery/chicken_boneless_json', endpoint='chicken_boneless_json')
+def index():
+    return render_template('json/grocery/meat/chicken_boneless.json')
+
+@app.route('/us/grocery/chicken_breast_json', endpoint='chicken_breast_json')
+def index():
+    return render_template('json/grocery/meat/chicken_breast.json')
+
+@app.route('/us/grocery/chicken_legs_json', endpoint='chicken_legs_json')
+def index():
+    return render_template('json/grocery/meat/chicken_legs.json')
+
+@app.route('/us/grocery/chicken_whole_json', endpoint='chicken_whole_json')
+def index():
+    return render_template('json/grocery/meat/chicken_whole.json')
+
+@app.route('/us/grocery/chuck_roast_json', endpoint='chuck_roast_json')
+def index():
+    return render_template('json/grocery/meat/chuck_roast.json')
+
+@app.route('/us/grocery/ham_json', endpoint='ham_json')
+def index():
+    return render_template('json/grocery/meat/ham.json')
+
+@app.route('/us/grocery/prok_chop_boneless_json', endpoint='prok_chop_boneless_json')
+def index():
+    return render_template('json/grocery/meat/prok_chop_boneless.json')
+
+@app.route('/us/grocery/pork_chop_center_cut_json', endpoint='pork_chop_center_cut_json')
+def index():
+    return render_template('json/grocery/meat/pork_chop_center_cut.json')
+
+@app.route('/us/grocery/round_roast_json', endpoint='round_roast_json')
+def index():
+    return render_template('json/grocery/meat/round_roast.json')
+
+@app.route('/us/grocery/steak_sirloin_json', endpoint='steak_sirloin_json')
+def index():
+    return render_template('json/grocery/meat/steak_sirloin.json')
+
 
 
 if __name__ == '__main__':

@@ -1,0 +1,9 @@
+{
+"value": 4.404,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Pork Chop (Boneless) in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/pork_chop_boneless_json"
+}

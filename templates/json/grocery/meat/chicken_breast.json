@@ -1,0 +1,9 @@
+{
+"value": 3.504,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Chicken Breast (Bone In) in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/chicken_breast_json"
+}

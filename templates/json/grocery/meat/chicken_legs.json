@@ -1,0 +1,9 @@
+{
+"value": 1.548,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Chicken Legs in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/chicken_legs_json"
+}

@@ -1,0 +1,9 @@
+{
+"value": 4.165,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Pork Chop (Center Cut) in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/pork_chop_center_cut_json"
+}

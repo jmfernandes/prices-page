@@ -1,0 +1,9 @@
+{
+"value": 3.907,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Ground Beef (Chuck) in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/beef_ground_chuck_json"
+}

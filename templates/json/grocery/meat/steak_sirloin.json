@@ -1,0 +1,9 @@
+{
+"value": 5.846,
+"symbol": "P",
+"subscript": "",
+"units": "dollars/pound",
+"name": "Average Price of Sirloin Steak in United States", 
+"citation": "http://www.bls.gov/ro3/apmw.htm",
+"url":"http://www.prices.datanab.net/us/grocery/steak_sirloin_json"
+}
