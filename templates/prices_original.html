@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <meta charset="utf-8">
+                <title>Prices Page</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <link rel="stylesheet" type="text/css" href="https://conversions.herokuapp.com/static/bootstrap.css" />
+                <link rel="SHORTCUT ICON" href="https://conversions.herokuapp.com/static/img/Dglove.ico">
+                <style type="text/css">
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                    background-image:url('https://conversions.herokuapp.com/static/img/striped_lens.png'); 
+                }
+                .sidebar-nav {
+                    padding: 9px 0;
+                }
+                th
+                {
+                    text-align: left
+                }
+                td
+                {
+                    padding:15px; text-align: left; vertical-align:text-top; 
+                }
+                tr
+                {
+                    padding:15px; text-align: left; vertical-align:text-top; 
+                }
+                .open {
+                display: block;
+                }
+                .closed {
+                    display: none;
+                }
+                .item1 {
+                    font-size: 15px;
+                    text-decoration:none;
+                    cursor: pointer;
+                    color:black;
+                    position:relative; right:18%;
+
+                }
+                .item2 {
+                    list-style-type: none;
+                    font-size:14px;
+                }
+                .item3 {
+                    list-style-type: none;
+                    display:inline;
+                }
+                .item4 {
+                font-size: 15px;
+                text-decoration:none;
+                cursor: pointer;
+                color:black;
+                position:relative; right:12%;
+
+                }
+                footer {
+                    width:100%;
+                    position:fixed;
+                    top: auto;
+                    bottom: 0;
+                    background:#6cf;
+                }
+                </style>
+                <link rel="shortcut icon" href="ico/favicon.ico">
+                <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                </head>
+        <body>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand"><img src="https://conversions.herokuapp.com/static/img/Dglove_small_trans3.ico" alt="" style="padding-bottom:5px;" /></a>
+                        <a class="brand" style="padding-left:1px;" href="https://www.datanab.net/">Data Nab</a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                                <li><a href="https://www.datanab.net/" style="padding-left:5px;"><i class="icon-home icon-white"></i>Home</a></li>
+                                <li><a href="https://www.datanab.net/about" style="padding-left:5px;"><i class="icon-info-sign icon-white"></i>About</a></li>
+                                <li><a href="https://www.datanab.net/contact" style="padding-left:5px;"><i class="icon-user icon-white"></i>Contact</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" style="padding-left:4px;"><i class="icon-list-alt icon-white"></i>
+                                        Pages <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="https://constants.datanab.net">Constants</a></li>
+                                        <li><a tabindex="-1" href="https://conversions.datanab.net">Conversions</a></li>
+                                        <li><a tabindex="-1" href="https://prices.datanab.net">Prices</a></li>
+                                        <li><a tabindex="-1" href="https://efficiency.datanab.net">Efficiencies</a></li>
+                                        <li class="divider"></li>
+                                        <li><a tabindex="-1" href="https://www.datanab.net/examples">Examples</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form method="get" style="margin:2;" action="https://www.picosearch.com/cgi-bin/ts.pl" class="navbar-search pull-right">
+                      <input type="hidden" name="index" value="527593" />
+                      <input type="text" class="input-medium search-query"  name="query" value="" size="20" placeholder="Type Search Words Here"/>
+                      <button type="submit" value="Search" class="btn">Search</button></form>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="well sidebar-nav">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">Pages</li>
+                                <li><a href="https://constants.datanab.net/">Constants</a></li>
+                                <li><a href="https://conversions.datanab.net/">Conversion Coefficients</a></li>
+                                <li class="active"><a href="https://prices.datanab.net/">Prices</a></li>
+                                <li><a href="https://efficiency.datanab.net/">Efficiencies</a></li>
+                            </ul>
+                        </div><!--/.well -->
+                    </div><!--/span-->
+                    <div class="span9">
+                        <div class="well well-small">
+                            <h3>Prices</h3>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <table border="0" width="800" >
+                                    <tr>
+                                        <th>Fuel Prices</th>
+                                        <th>Grocery Prices</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <a href="https://prices.datanab.net/us/fuel/gasoline">Gasoline (US avg.)</a>
+                                        <br>
+                                        </td>
+                                        <td>
+                                        <ul class="open">
+                                            <ol class="item3" id="item11"><a class="item4" onclick="toggle('item11');">Cereals (click to expand)</a></ol>
+                                            <ul id="ul_item11" class="closed">
+                                                <li class="item2" id="item11_1">
+                                                <a href="https://prices.datanab.net/us/grocery/flour">Flour (US avg.)</a></li>
+                                                <li class="item2" id="item11_2">
+                                                <a href="https://prices.datanab.net/us/grocery/bread_white">White Bread (US avg.)</a></li>
+                                                <li class="item2" id="item11_3">
+                                                <a href="https://prices.datanab.net/us/grocery/bread_whole_wheat">Wheat Bread (US avg.)</a></li>
+                                                <li class="item2" id="item11_4">
+                                                <a href="https://prices.datanab.net/us/grocery/rice_white_long">White Rice (US avg.)</a></li>
+                                                <li class="item2" id="item11_5">
+                                                <a href="https://prices.datanab.net/us/grocery/spaghetti">Spaghetti (US avg.)</a></li>
+                                                <li class="item2" id="item11_6">
+                                                <a href="https://prices.datanab.net/us/grocery/cookies_chocolate_chip">Chocolate Chip Cookie (US avg.)</a></li>
+                                            </ul>
+                                            <br>
+                                            <ol class="item3" id="item12"><a class="item4" onclick="toggle('item12');">meats (click to expand)</a></ol>
+                                            <ul id="ul_item12" class="closed">
+                                                <li class="item2" id="item12_1">
+                                                <a href="https://prices.datanab.net/us/grocery/bacon">Bacon (US avg.)</a></li>
+                                                <li class="item2" id="item12_2">
+                                                <a href="https://prices.datanab.net/us/grocery/beef_ground_chuck">Chuck Beef (US avg.)</a></li>
+                                                <li class="item2" id="item12_3">
+                                                <a href="https://prices.datanab.net/us/grocery/beef_ground_lean">Ground Beef - Lean(US avg.)</a></li>
+                                                <li class="item2" id="item12_4">
+                                                <a href="https://prices.datanab.net/us/grocery/beef_ground">Ground Beef (US avg.)</a></li>
+                                                <li class="item2" id="item12_5">
+                                                <a href="https://prices.datanab.net/us/grocery/bologna">Bologna (US avg.)</a></li>
+                                                <li class="item2" id="item12_6">
+                                                <a href="https://prices.datanab.net/us/grocery/chicken_boneless">Boneless Chicken (US avg.)</a></li>
+                                                <li class="item2" id="item12_7">
+                                                <a href="https://prices.datanab.net/us/grocery/chicken_breast">Chicken Breast (US avg.)</a></li>
+                                                <li class="item2" id="item12_8">
+                                                <a href="https://prices.datanab.net/us/grocery/chicken_legs">Chicken Legs (US avg.)</a></li>
+                                                <li class="item2" id="item12_9">
+                                                <a href="https://prices.datanab.net/us/grocery/chicken_whole">Whole Chicken (US avg.)</a></li>
+                                                <li class="item2" id="item12_10">
+                                                <a href="https://prices.datanab.net/us/grocery/chuck_roast">Chuck Roast (US avg.)</a></li>
+                                                <li class="item2" id="item12_11">
+                                                <a href="https://prices.datanab.net/us/grocery/ham">Ham (US avg.)</a></li>
+                                                <li class="item2" id="item12_12">
+                                                <a href="https://prices.datanab.net/us/grocery/pork_chop_boneless">Boneless Pork Chop (US avg.)</a></li>
+                                                <li class="item2" id="item12_13">
+                                                <a href="https://prices.datanab.net/us/grocery/pork_chop_center_cut">Pork Chop - Center Cut (US avg.)</a></li>
+                                                <li class="item2" id="item12_14">
+                                                <a href="https://prices.datanab.net/us/grocery/round_roast">Round Roast (US avg.)</a></li>
+                                                <li class="item2" id="item12_15">
+                                                <a href="https://prices.datanab.net/us/grocery/steak_sirloin">Sirloin Steak (US avg.)</a></li>
+                                            </ul>
+                                        </ul>
+                                        <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Housing Prices</th>
+                                        <th>Goods Prices</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <a href="https://prices.datanab.net/us/housing/housing">Housing (US 2011 avg.)</a><br>
+                                        </td>
+                                        <td>
+                                        <a href="https://prices.datanab.net/us/goods/white_sugar">White Sugar (US avg.)</a><br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><!--/span-->
+                            <div class="span6">
+                            </div><!--/span-->
+                        </div><!--/row-->
+                    </div><!--/span-->
+                </div><!--/row-->
+                
+                <hr>
+                
+            </div><!--/.fluid-container-->
+            <footer> <!-- site wide footer -->
+                <nav>
+                    Copyright &copy; Josh Fernandes 2012
+                </nav>
+            </footer>
+            <script src="https://conversions.herokuapp.com/static/js/jquery.js"></script>
+            <script src="https://conversions.herokuapp.com/static/js/bootstrap.js"></script>
+            <script src="https://conversions.herokuapp.com/static/js/bootstrap.min.js"></script>
+            <script src="https://conversions.herokuapp.com/static/js/timestamp.js"></script>
+            <script src="https://conversions.herokuapp.com/static/js/bootstrap-dropdown.js"></script>
+            <script src="https://conversions.herokuapp.com/static/js/toggle.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                                  $('.dropdown-toggle').dropdown();
+                                  });
+
+                $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+                </script>
+
+            <script src="//static.getclicky.com/js" type="text/javascript"></script>
+            <script type="text/javascript">try{ clicky.init(100642142); }catch(e){}</script>
+        </body>
+    </html>
