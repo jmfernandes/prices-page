@@ -1,21 +1,15 @@
 import os
 from functools import wraps
-from flask import Flask, render_template, json,request, redirect, current_app
+from flask import Flask, render_template, json,request, redirect, current_app,before_request
 
 app = Flask(__name__)
 
-def ssl_required(fn):
-    @wraps(fn)
-    def decorated_view(*args, **kwargs):
-        if current_app.config.get("SSL"):
-            if request.is_secure:
-                return fn(*args, **kwargs)
-            else:
-                return redirect(request.url.replace("http://", "https://"))
-        
-        return fn(*args, **kwargs)
-            
-    return decorated_view
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        return redirect(url, code=code)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -314,5 +308,6 @@ def index():
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
+    app.debug = False
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
