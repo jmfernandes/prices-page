@@ -4,8 +4,8 @@ from flask import *
 
 app = Flask(__name__)
 
-@app.before_request
-def before_request():
+@app.before_first_request
+def before_first_request():
     if request.url.startswith('http://'):
         url = request.url.replace('http://', 'https://', 1)
         code = 301
