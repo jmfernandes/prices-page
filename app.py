@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, json,request, redirect,before_first_request,url
+from flask import Flask, render_template, json,request, redirect
 
 app = Flask(__name__)
 
