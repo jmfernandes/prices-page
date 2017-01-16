@@ -1,9 +1,14 @@
 import os
 from flask import Flask, render_template, json
-from flask_sslify import SSLify
 
 app = Flask(__name__)
-sslify = SSlify(app)
+
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        return redirect(url, code=code)
 
 @app.errorhandler(404)
 def page_not_found(error):
