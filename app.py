@@ -22,7 +22,7 @@ def page_not_found(error):
 
 @app.route('/')
 def index():
-    return  render_template('prices.html')
+    return render_template('prices.html')
 
 @app.route('/us/fuel/gasoline', endpoint='gasoline')
 def index():
