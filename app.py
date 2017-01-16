@@ -1,7 +1,9 @@
 import os
 from flask import Flask, render_template, json
+from flask_sslify import SSLify
 
 app = Flask(__name__)
+sslify = SSlify(app)
 
 @app.errorhandler(404)
 def page_not_found(error):
