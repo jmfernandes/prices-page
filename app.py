@@ -24,6 +24,8 @@ def page_not_found(error):
 def index():
     return render_template('prices.html')
 
+"""Web pages"""
+
 @app.route('/us/fuel/gasoline', endpoint='gasoline')
 def index():
     json_file = open('templates/json/fuel/gasoline.json')
