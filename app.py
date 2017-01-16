@@ -1,6 +1,6 @@
 import os
 from functools import wraps
-from flask import Flask, render_template, json,request, redirect, current_app,before_request
+from flask import *
 
 app = Flask(__name__)
 
